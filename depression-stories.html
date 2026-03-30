@@ -85,8 +85,30 @@
 <body>
 
 <nav>
-  <div class="nav-logo" id="navLogo" onclick="showHero()">Depression Stories</div>
-  <div class="nav-tag">Mental Health</div>
+  <div class="nav-logo" id="navLogo" onclick="showHero()" data-i18n="depression_stories">Depression Stories</div>
+  <div class="nav-tag" data-i18n="mental_health">Mental Health</div>
+<select id="lang-selector" onchange="changeLang(this.value)" style="margin-left:auto; z-index:99; background:white; padding:5px; border-radius:5px; border:1px solid #ccc;">
+<option value="en">English</option>
+<option value="es">Español</option>
+<option value="fr">Français</option>
+<option value="de">Deutsch</option>
+<option value="hi">हिन्दी</option>
+<option value="ja">日本語</option>
+<option value="zh">中文</option>
+<option value="ko">한국어</option>
+<option value="ru">Русский</option>
+<option value="it">Italiano</option>
+<option value="pt">Português</option>
+<option value="ar">العربية</option>
+<option value="tr">Türkçe</option>
+<option value="nl">Nederlands</option>
+<option value="pl">Polski</option>
+<option value="vi">Tiếng Việt</option>
+<option value="th">ไทย</option>
+<option value="sv">Svenska</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="fil">Filipino</option>
+</select>
 </nav>
 
 <!-- HERO -->
@@ -97,22 +119,22 @@
     <div class="orb orb3"></div>
   </div>
   <div class="hero-badge"><span class="badge-dot"></span> Real Stories · Real People</div>
-  <h1 class="hero-title">You Are Not <em>Alone</em><br>in the Dark</h1>
-  <p class="hero-sub">Depression affects millions. These are real stories of people who found their way — and what they want you to know.</p>
-  <p class="hero-quote">"The bravest thing I ever did was continuing my life when I wanted to die." — Juliette Lewis</p>
-  <button class="cta-btn" onclick="showStories()">Read Their Stories →</button>
+  <h1 class="hero-title" data-i18n="you_are_not_alonein_">You Are Not <em>Alone</em><br>in the Dark</h1>
+  <p class="hero-sub" data-i18n="depression_affects_m">Depression affects millions. These are real stories of people who found their way — and what they want you to know.</p>
+  <p class="hero-quote" data-i18n="_the_bravest_thing_i">"The bravest thing I ever did was continuing my life when I wanted to die." — Juliette Lewis</p>
+  <button class="cta-btn" onclick="showStories()" data-i18n="read_their_stories__">Read Their Stories →</button>
   <div class="hero-stats">
-    <div class="stat"><div class="stat-num">280M</div><div class="stat-label">People Worldwide</div></div>
-    <div class="stat"><div class="stat-num">7</div><div class="stat-label">Stories Shared</div></div>
-    <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Not Alone</div></div>
+    <div class="stat"><div class="stat-num">280M</div><div class="stat-label" data-i18n="people_worldwide">People Worldwide</div></div>
+    <div class="stat"><div class="stat-num">7</div><div class="stat-label" data-i18n="stories_shared">Stories Shared</div></div>
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-label" data-i18n="not_alone">Not Alone</div></div>
   </div>
 </section>
 
 <!-- STORIES LIST -->
 <section id="stories-list">
   <div class="list-header">
-    <h2>Stories of Depression</h2>
-    <p>Each journey is unique. Each one matters.</p>
+    <h2 data-i18n="list-head">Stories of Depression</h2>
+    <p data-i18n="list-sub">Each journey is unique. Each one matters.</p>
   </div>
   <div class="cards-grid" id="cardsContainer"></div>
 </section>
@@ -311,5 +333,6 @@ function showStory(index) {
 
 showHero();
 </script>
+<script src="/i18n/loader.js"></script>
 </body>
 </html>
