@@ -145,24 +145,8 @@
 </section>
 
 <script>
-const PHOTO_AVATARS = [
-  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&h=200&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=200&h=200&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1500048993953-d23a436266cf?w=200&h=200&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1546961342-ea5f60b193b5?w=200&h=200&fit=crop&crop=face"
-];
-const PHOTO_PORTRAITS = [
-  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=500&fit=crop&crop=top",
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=500&fit=crop&crop=top",
-  "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&h=500&fit=crop&crop=top",
-  "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=800&h=500&fit=crop&crop=top",
-  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&h=500&fit=crop&crop=top",
-  "https://images.unsplash.com/photo-1500048993953-d23a436266cf?w=800&h=500&fit=crop&crop=top",
-  "https://images.unsplash.com/photo-1546961342-ea5f60b193b5?w=800&h=500&fit=crop&crop=top"
-];
+
+
 
 const C = {
   stripe:"#4F95FF", tagBg:"#dbeeff", tagText:"#2563c0",
@@ -290,9 +274,7 @@ function renderCards() {
       <div class="card-stripe" style="background:${s.color.stripe}"></div>
       <div class="card-body">
         <div class="card-top">
-          <div class="card-avatar" style="border-color:${s.color.stripe}">
-            <img src="${PHOTO_AVATARS[i]}" alt="${s.name}"/>
-          </div>
+          
           <div class="card-name-wrap">
             <div class="card-name">
               ${s.name}, ${s.age}
@@ -319,7 +301,7 @@ function showStory(index) {
     <div class="story-hero-band"></div>
     <h1 class="story-name-large">${s.name}, ${s.age}</h1>
     <span class="story-identity-badge" style="background:${s.color.tagBg};color:${s.color.tagText};border-color:${s.color.border}">${s.identity}</span>
-    <div class="portrait-wrap"><img src="${PHOTO_PORTRAITS[index]}" alt="${s.name}"/></div>
+    
     <div class="story-body">${storyParas}</div>
     <div class="story-highlight" style="border-color:${s.color.border};background:${s.color.hlBg};color:${s.color.tagText}">"${s.highlight}"</div>
     <div class="story-takeaway" style="border-color:${s.color.border};background:${s.color.takeBg}">
@@ -333,6 +315,6 @@ function showStory(index) {
 
 showHero();
 </script>
-<script src="/i18n/loader.js"></script>
+<script src="./i18n/loader.js"></script>
 </body>
 </html>
